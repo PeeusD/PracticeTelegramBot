@@ -29,10 +29,12 @@ def adverb_query():
     for i in range(52): 
         sleep(5)       
         ques = Adverb.questions[i][0]
-        print(ques)
+        # print(ques)
+        bot.send_message(chat_id = chat_id, text = ques, parse_mode = ParseMode.HTML)
         sleep(10)
         ans = Adverb.sol[i]
-        print(ans)
+        # print(ans)
+        bot.send_message(chat_id = chat_id, text = ans, parse_mode = ParseMode.HTML)
 def articles_query():
     for i in range(52):  
         sleep(5)  
